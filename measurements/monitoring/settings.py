@@ -78,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'measurements_db',
-        'USER': 'measurements_user',
+        'USER': 'measurement_user',
         'PASSWORD': 'isis2503',
-        'HOST': '0.0.0.0',
+        'HOST': '10.202.0.3',
         'PORT': '5432',
     }
 }
@@ -133,5 +133,5 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
-PATH_VAR = "http://0.0.0.0:8080/variables"
-PATH_PLS = "http://0.0.0.0:8080/places"
+PATH_VAR = "http://10.202.0.4:8080/variables"
+PATH_PLS = "http://10.202.0.9:8080/places"
