@@ -36,7 +36,6 @@ def MeasurementCreate(request):
         if check_variable(data_json) == True and check_place(data_json) == True:
             measurement = Measurement()
             measurement.variable = data_json['variable']
-            measurement.place = data_json['place']
             measurement.value = data_json['value']
             measurement.unit = data_json['unit']
             measurement.place = data_json['place']
@@ -54,7 +53,6 @@ def MeasurementsCreate(request):
                     if check_variable(measurement) == True and check_place(measurement) == True:
                         db_measurement = Measurement()
                         db_measurement.variable = measurement['variable']
-                        db_measurement.place = measurement['place']
                         db_measurement.value = measurement['value']
                         db_measurement.unit = measurement['unit']
                         db_measurement.place = measurement['place']
